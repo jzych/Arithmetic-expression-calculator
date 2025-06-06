@@ -36,3 +36,6 @@ jobs:
           files: lcov.info
           fail_ci_if_error: true
           slug: jzych/Arithmetic-expression-calculator
+      
+      - name: Run Clippy (Rust linter)
+        run: cargo clippy --all-targets --all-features -- -D warnings
