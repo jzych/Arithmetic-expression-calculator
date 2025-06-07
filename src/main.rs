@@ -1,4 +1,5 @@
 use std::io::{self, Write};
+mod lexer;
 
 fn main() {
     let mut buffer = String::new();
@@ -8,5 +9,7 @@ fn main() {
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut buffer).unwrap();
 
-    println!("Input: ,{}", buffer);
+    println!("Input: {}", buffer);
+
+    let _result = lexer::tokenize(&buffer);
 }
