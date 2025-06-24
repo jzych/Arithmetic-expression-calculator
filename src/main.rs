@@ -1,5 +1,6 @@
 use std::io::{self, Write};
 mod lexer;
+mod parser;
 
 fn main() {
     let mut buffer = String::new();
@@ -11,5 +12,6 @@ fn main() {
 
     println!("Input: {}", buffer);
 
-    let _result = lexer::tokenize(&buffer);
+    let tokens = lexer::tokenize(&buffer);
+    let _result = parser::parse(&tokens.unwrap()); // TODO: add match case for error handling
 }

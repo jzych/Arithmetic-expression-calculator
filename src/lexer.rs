@@ -1,6 +1,6 @@
 use std::str::Chars;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Token {
     Number(i64),
     Plus,
