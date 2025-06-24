@@ -95,14 +95,14 @@ mod tests {
 
     #[test]
     fn test_expression_with_long_digits() {
-        let input = String::from("12 + 456 / 1234");
+        let input = String::from("12 - 456 / 1234");
         let result = tokenize(&input).unwrap();
 
         assert_eq!(
             result,
             vec![
                 Token::Number(12),
-                Token::Plus,
+                Token::Minus,
                 Token::Number(456),
                 Token::Slash,
                 Token::Number(1234),
