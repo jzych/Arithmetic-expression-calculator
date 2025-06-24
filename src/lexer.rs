@@ -11,7 +11,7 @@ pub enum Token {
     RightParenthesis,
 }
 
-pub fn tokenize(input: &String) -> Result<Vec<Token>, String> {
+pub fn tokenize(input: &str) -> Result<Vec<Token>, String> {
     let mut tokens = Vec::new();
     let mut chars = input.chars().peekable();
 
